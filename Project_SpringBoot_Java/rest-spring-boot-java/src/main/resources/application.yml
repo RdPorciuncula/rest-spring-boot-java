@@ -1,1 +1,15 @@
-spring.application.name=rest-spring-boot-java
+spring:
+  datasource:
+     url: jdbc:mysql://Mac-mini-de-Rodrigo.local:3306/worker?useTimezone=true&serverTimezone=UTC
+     username: root
+     password: admin123
+     driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+       hibernate:
+         dialect: org.hibernate.dialect.MySQL8Dialect
+         boot:
+          "[allow_jdbc_metadata_access]": false
+       show-sql: false
