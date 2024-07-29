@@ -19,14 +19,12 @@ public class PersonService {
 	PersonRepository repository;
 	
 	public List<Person> findAll() {
-		
 		logger.info("Finding All people!");
 		
 		return repository.findAll() ;
 	}
 
 	public Person findById(Long id) {
-		
 		logger.info("Finding one person!");
 		
 		return repository.findById(id)
@@ -34,14 +32,12 @@ public class PersonService {
 	}
 	
 	public Person create(Person person) {
-		
 		logger.info("Creating one person!");
 		
 		return repository.save(person);
 	}
 	
 	public Person update(Person person) {
-		
 		logger.info("Updating one person!");
 		
 		Person entity = repository.findById(person.getId())
