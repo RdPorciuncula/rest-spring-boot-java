@@ -46,10 +46,15 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		<dependency>
+		 <dependency>
     		<groupId>com.github.dozermapper</groupId>
     		<artifactId>dozer-core</artifactId>
     		<version>${dozer.version}</version>
+		</dependency>
+		<dependency>
+  			<groupId>org.modelmapper</groupId>
+  			<artifactId>modelmapper</artifactId>
+  			<version>3.1.1</version>
 		</dependency>
 	</dependencies>
 	<!--DEPENDENCIES-->
