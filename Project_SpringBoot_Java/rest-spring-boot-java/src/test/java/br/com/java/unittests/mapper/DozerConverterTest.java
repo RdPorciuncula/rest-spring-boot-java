@@ -1,4 +1,4 @@
-package br.com.java.unitTests.mapper;
+package br.com.java.unittests.mapper;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
