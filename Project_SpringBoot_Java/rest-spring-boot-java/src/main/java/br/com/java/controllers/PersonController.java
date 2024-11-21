@@ -22,7 +22,7 @@ import br.com.java.util.MediaType;
 @RequestMapping("/api/person/v1")
 public class PersonController {
 	
-	@Autowired // Ocorre em tempo de execução
+	@Autowired
 	private PersonService personService;
 	
 	@GetMapping(produces = {MediaType.APPLICATION_JSON, 
@@ -31,7 +31,7 @@ public class PersonController {
 	public List<PersonVO> findAll() {
 		return personService.findAll();
 	}
-	
+
 	@GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON, 
 											 MediaType.APPLICATION_XML,
 											 MediaType.APPLICATION_YML})
