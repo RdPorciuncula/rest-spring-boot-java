@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.1</version>
+		<version>3.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.java</groupId>
@@ -16,7 +16,7 @@
 	<properties>
 		<java.version>18</java.version>
 		<dozer.version>7.0.0</dozer.version>
-		<springdoc.version>2.6.0</springdoc.version>
+		<springdoc.version>2.7.0</springdoc.version>
 	</properties>
 	<!--PROPRIEDADES-->
 	

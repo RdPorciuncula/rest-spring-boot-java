@@ -16,7 +16,7 @@ public class OpenApiConfig {
 				.info(new Info()
 						.title("Java API Spring Boot 3")
 						.version("v1")
-						.description("")
+						.description("Java API Spring Boot 3")
 						.termsOfService("")
 						.license(
 							new License()
@@ -25,6 +25,4 @@ public class OpenApiConfig {
 							)
 						);
 	}
-    
-    
 }

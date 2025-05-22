@@ -26,7 +26,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 @RestController
 @RequestMapping("/api/person/v1")
-@Tag(name = "People", description = "Endpoints for managing peoples")
+@Tag(name = "People", description = "Endpoints for Managing People")
 public class PersonController {
 	
 	@Autowired
@@ -35,16 +35,17 @@ public class PersonController {
 	@GetMapping(produces = {MediaType.APPLICATION_JSON, 
 							MediaType.APPLICATION_XML,
 							MediaType.APPLICATION_YML})
-	@Operation(summary = "Find all people", description = "Finds all people",
+	@Operation(summary = "Find All People", description = "Finds All People",
 	tags = {"People"},
 	responses = {
 			@ApiResponse(description = "Success", responseCode = "200", 
 				content = {
 					@Content(
-							mediaType = "application/json",
+							mediaType = MediaType.APPLICATION_JSON,
 							array = @ArraySchema(schema = @Schema(implementation = PersonVO.class))
 							)
 			}),
+			@ApiResponse(description = "No Content", responseCode = "204", content = @Content),
 			@ApiResponse(description = "Bad Request", responseCode = "400", content = @Content),
 			@ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
 			@ApiResponse(description = "Not Found", responseCode = "404", content = @Content),
@@ -55,7 +56,6 @@ public class PersonController {
 	}
 	
 	
-
 	@GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON, 
 											 MediaType.APPLICATION_XML,
 											 MediaType.APPLICATION_YML})
