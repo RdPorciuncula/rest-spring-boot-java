@@ -1,11 +1,12 @@
 package br.com.java.services;
 
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
+
 import java.util.List;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 import org.springframework.stereotype.Service;
 
 import br.com.java.controllers.PersonController;
@@ -18,7 +19,7 @@ import br.com.java.mapper.custom.PersonMapper;
 import br.com.java.model.Person;
 import br.com.java.repositories.PersonRepository;
 
-@Service // Cuida da instanciação
+@Service
 public class PersonService {
 	
 	private Logger logger = Logger.getLogger(PersonService.class.getName());

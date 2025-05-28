@@ -40,7 +40,6 @@ public class Book implements Serializable {
 	
 	public Book() {}
 	
-
 	public Long getId() {
 		return id;
 	}
@@ -49,55 +48,37 @@ public class Book implements Serializable {
 		this.id = id;
 	}
 
-
-
 	public String getAuthor() {
 		return author;
 	}
-
-
 
 	public void setAuthor(String author) {
 		this.author = author;
 	}
 
-
-
 	public Date getLaunchDate() {
 		return launchDate;
 	}
-
-
 
 	public void setLaunchDate(Date launchDate) {
 		this.launchDate = launchDate;
 	}
 
-
-
 	public Double getPrice() {
 		return price;
 	}
-
-
 
 	public void setPrice(Double price) {
 		this.price = price;
 	}
 
-
-
 	public String getTitle() {
 		return title;
 	}
 
-
-
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
-
 
 	@Override
 	public int hashCode() {
@@ -117,6 +98,4 @@ public class Book implements Serializable {
 				&& Objects.equals(launchDate, other.launchDate) && Objects.equals(price, other.price)
 				&& Objects.equals(title, other.title);
 	}
-
-	
 }
