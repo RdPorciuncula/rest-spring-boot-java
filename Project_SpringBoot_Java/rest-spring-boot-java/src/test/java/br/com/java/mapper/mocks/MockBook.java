@@ -36,6 +36,7 @@ public class MockBook {
     
     public Book mockEntity(Integer number) {
         Book book = new Book();
+        book.setId(Long.valueOf(String.valueOf(number)));
         book.setAuthor("Rodrigo" + number);
         book.setLaunchDate(new Date());
         book.setPrice(30D);
@@ -46,6 +47,7 @@ public class MockBook {
 
     public BookVO mockVO(Integer number) {
         BookVO book = new BookVO();
+        book.setKey(Long.valueOf(String.valueOf(number)));
         book.setAuthor("Rodrigo" + number);
         book.setLaunchDate(new Date());
         book.setPrice(30D);
