@@ -13,34 +13,34 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.java.data.vo.v1.PersonVO;
-import br.com.java.services.PersonService;
+import br.com.java.data.vo.v1.BookVO;
+import br.com.java.services.BookService;
 import br.com.java.util.MediaType;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
-@RequestMapping("/api/person/v1")
-@Tag(name = "People", description = "Endpoints for Managing People")
-public class PersonController implements PersonControllerSwagger {
+@RequestMapping("/api/book/v1")
+@Tag(name = "Book", description = "Endpoints for Managing Books")
+public class BookController implements BookControllerSwagger {
 	
 	@Autowired
-	private PersonService personService;
+	private BookService bookService;
 	
 	@Override
 	@GetMapping(produces = {MediaType.APPLICATION_JSON, 
 							MediaType.APPLICATION_XML,
 							MediaType.APPLICATION_YML})
 	
-	public List<PersonVO> findAll() {
-		return personService.findAll();
+	public List<BookVO> findAll() {
+		return bookService.findAll();
 	}
 	
 	@Override
 	@GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON, 
 											 MediaType.APPLICATION_XML,
 											 MediaType.APPLICATION_YML})
-	public PersonVO findById(@PathVariable(value = "id") Long id) throws Exception {
-		return personService.findById(id);
+	public BookVO findById(@PathVariable(value = "id") Long id) throws Exception {
+		return bookService.findById(id);
 	}
 	
 	@Override
@@ -50,8 +50,8 @@ public class PersonController implements PersonControllerSwagger {
 				 produces = {MediaType.APPLICATION_JSON, 
 						 	 MediaType.APPLICATION_XML,
 						 	 MediaType.APPLICATION_YML})
-	public PersonVO create(@RequestBody PersonVO person) throws Exception {
-		return personService.create(person);
+	public BookVO create(@RequestBody BookVO book) throws Exception {
+		return bookService.create(book);
 	}
 		
 	@Override
@@ -61,14 +61,14 @@ public class PersonController implements PersonControllerSwagger {
 				produces = {MediaType.APPLICATION_JSON, 
 							MediaType.APPLICATION_XML,
 							MediaType.APPLICATION_YML})
-	public PersonVO update(@RequestBody PersonVO person) throws Exception {
-		return personService.update(person);
+	public BookVO update(@RequestBody BookVO book) throws Exception {
+		return bookService.update(book);
 	}
 	
 	@Override
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<?> delete(@PathVariable(value = "id") Long id) throws Exception {
-		personService.delete(id);
+		bookService.delete(id);
 		return ResponseEntity.noContent().build();
 	}
 }
